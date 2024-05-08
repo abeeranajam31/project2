@@ -122,4 +122,6 @@ def predict_sentiment(sample_review):
   ps = PorterStemmer()
   final_review = [ps.stem(word) for word in sample_review_words]
   final_review = ' '.join(final_review)
-
+  temp = cv.transform([final_review]).toarray()
+  return classifier.predict(temp)
+     
