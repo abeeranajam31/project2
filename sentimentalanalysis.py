@@ -125,3 +125,29 @@ def predict_sentiment(sample_review):
   temp = cv.transform([final_review]).toarray()
   return classifier.predict(temp)
      
+# Predicting values
+sample_review = 'The food is really good here.'
+
+if predict_sentiment(sample_review):
+  print('This is a POSITIVE review.')
+else:
+  print('This is a NEGATIVE review!')
+
+
+# Predicting values
+sample_review = 'Food was pretty bad and the service was very slow.'
+
+if predict_sentiment(sample_review):
+  print('This is a POSITIVE review.')
+else:
+  print('This is a NEGATIVE review!')
+
+
+# Predicting values
+sample_review = 'The food was absolutely wonderful, from preparation to presentation, very pleasing.'
+
+if predict_sentiment(sample_review):
+  print('This is a POSITIVE review.')
+else:
+  print('This is a NEGATIVE review!')
+     
