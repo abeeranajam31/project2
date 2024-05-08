@@ -112,3 +112,14 @@ print('The best accuracy is {}% with alpha value as {}'.format(round(best_accura
 
 classifier = MultinomialNB(alpha=0.2)
 classifier.fit(X_train, y_train)
+
+
+def predict_sentiment(sample_review):
+  sample_review = re.sub(pattern='[^a-zA-Z]',repl=' ', string = sample_review)
+  sample_review = sample_review.lower()
+  sample_review_words = sample_review.split()
+  sample_review_words = [word for word in sample_review_words if not word in set(stopwords.words('english'))]
+  ps = PorterStemmer()
+  final_review = [ps.stem(word) for word in sample_review_words]
+  final_review = ' '.join(final_review)
+
