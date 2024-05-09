@@ -150,4 +150,14 @@ if predict_sentiment(sample_review):
   print('This is a POSITIVE review.')
 else:
   print('This is a NEGATIVE review!')
+
+
+
+# Predicting values
+sample_review = 'The food was just average '
+
+if predict_sentiment(sample_review):
+  print('This is a POSITIVE review.')
+else:
+  print('This is a NEGATIVE review!')
      
